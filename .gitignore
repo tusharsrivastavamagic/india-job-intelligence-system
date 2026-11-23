@@ -1,0 +1,12 @@
+.env
+*.json
+!sample*.json
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+logs/
+cache/
+_audit_extract/
+*.zip
+*.pyc

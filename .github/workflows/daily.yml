@@ -1,0 +1,18 @@
+name: Daily India job intelligence
+on:
+  workflow_dispatch:
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Restore single environment file
+        shell: bash
+        env:
+          APP_ENV_FILE: ${{ secrets.APP_ENV_FILE }}
+        run: printf '%s' "$APP_ENV_FILE" > .env
+      - run: python -m job_intelligence --production

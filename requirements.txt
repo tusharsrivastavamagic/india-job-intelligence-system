@@ -1,0 +1,8 @@
+beautifulsoup4>=4.12,<5
+apify-client>=1.8,<2
+gspread>=6,<7
+google-auth>=2,<3
+httpx>=0.27,<1
+python-dotenv>=1,<2
+python-jobspy>=1.5,<2
+pytest>=8,<9
